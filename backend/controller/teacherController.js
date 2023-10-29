@@ -49,7 +49,6 @@ const addTeacher = async(req, res)=>{
 const updateTeacher = async(req, res)=>{
     try {
         const {id} = req.params;
-        console.log(req.body);
         let teacher = await Teacher.findById(id);
 
         if(!teacher){

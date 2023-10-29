@@ -5,6 +5,9 @@ import {config} from "dotenv";
 import connectDB from "./db/db.connect.js";
 import studentRouter from "./routes/studentRouter.js";
 import teacherRouter from "./routes/teacherRouter.js";
+import cors from "cors";
+import helmet from "helmet";
+
 config();
 
 const PORT = process.env.PORT || 3000;
@@ -18,10 +21,10 @@ connectDB();
 app.use(express.json());
 
 //cors
-
+app.use(cors());
 
 // helmet
-
+app.use(helmet());
 
 //using Routes
 app.use('/api/v1/students', studentRouter);
