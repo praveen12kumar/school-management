@@ -20,6 +20,7 @@ const addStudent = async (req, res)=>{
             name,
             age,
             grade,
+            gender,
             attendance,
             marks,
             standard
